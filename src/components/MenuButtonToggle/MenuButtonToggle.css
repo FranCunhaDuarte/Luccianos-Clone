@@ -1,0 +1,60 @@
+.header-container .header-items .buttons-header .toggle-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-container .header-items .buttons-header .toggle-navbar .menu-button{
+    display: flex;
+    height: 16px;
+    width: 26px;
+    margin: 10px;
+    position: relative;
+}
+
+.header-container .header-items .buttons-header .toggle-navbar .menu-button .line{
+    width: 26px;
+    height: 2px;
+    background-color: var(--white);
+    position: absolute;
+}
+
+.header-container .header-items .buttons-header .toggle-navbar .menu-button .line.line-1{
+    top: 0;
+    left: 0;
+    transition: transform .2s ease-in-out, top .2s ease-in-out, background-color .3s ease-in-out;
+}
+
+.header-container .header-items .buttons-header .toggle-navbar .menu-button .line.line-2{
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    opacity: 1;
+    transition: transform .2s ease-in-out, opacity .2s ease-in-out, background-color .3s ease-in-out;
+}
+
+.header-container .header-items .buttons-header .toggle-navbar .menu-button .line.line-3{
+    bottom: 0;
+    left: 0;
+    transition: transform .2s ease-in-out, bottom .2s ease-in-out, background-color .3s ease-in-out;
+}
+
+.header-container .header-items .buttons-header .toggle-navbar.open .menu-button .line{
+    background-color: var(--black);
+}
+
+.header-container .header-items .buttons-header .toggle-navbar.open .menu-button .line-1{
+    top: 50%;
+    transform: rotate(45deg) translateY(-50%);
+}
+
+.header-container .header-items .buttons-header .toggle-navbar.open .menu-button .line-2{
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+
+.header-container .header-items .buttons-header .toggle-navbar.open .menu-button .line.line-3{
+    bottom: 50%;
+    transform: rotate(-45deg) translateY(50%);
+}

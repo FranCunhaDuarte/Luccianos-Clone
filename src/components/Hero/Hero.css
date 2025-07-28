@@ -1,0 +1,105 @@
+
+.hero{
+  position: relative;
+}
+
+.hero .hero-video{
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero .buttons-video-container{
+  position: absolute;
+  width: 90%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
+.hero .buttons-video-container .toggle-sound{
+  width: 25px;
+  height: 25px; 
+}
+
+
+.hero .buttons-video-container .toggle-sound .box-sound-item{
+  position: absolute;
+  opacity: 0;
+  scale: 0;
+  width: 30px;
+  height: 30px;
+  transition: opacity .2s ease-in-out, scale .2s ease-in-out;
+}
+
+.hero .buttons-video-container .toggle-sound .box-sound-item svg{
+  width: 25px;
+}
+
+
+.hero .buttons-video-container .toggle-sound .box-sound-item.active{
+  opacity: 1;
+  scale: 1;
+}
+
+.hero .scroll-animation{
+  height: 40px;
+  width: 14px;
+  position: relative;
+}
+
+.hero .scroll-animation .ball{
+  background-color: var(--white);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: scroll-instruction 1.5s normal infinite cubic-bezier(.17,.67,.83,.67);
+}
+
+@keyframes scroll-instruction {
+  0%{
+    top: 0;
+    opacity: 1;
+  }
+  100%{
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+
+.hero .tag-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.hero .tag-container .tag-box{
+  width: 90%;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+}
+
+.hero .tag-container .tag{
+    font-family: 'SilkSerif', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    pointer-events: none;
+    user-select: none;
+}
+
+@media (min-width: 800px) {
+  
+}

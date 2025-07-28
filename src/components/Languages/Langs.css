@@ -1,0 +1,84 @@
+.header-container .header-items .buttons-header .lang-section {
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0;
+    position: relative;
+    text-align: center;
+}
+
+.header-container .header-items .buttons-header .lang-section.sidemenu-open .selected-lang{
+    color: var(--black);
+}
+
+.header-container .header-items .buttons-header .lang-section .selected-lang{
+    text-decoration: none;
+    color: var(--white);
+    z-index: 1050;
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 7px;
+    transition: color .3s ease-in-out;
+}
+
+.header-container .header-items .buttons-header .lang-section .options-lang{
+    list-style-type: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--white);
+    text-align: center;
+    width: 50px;
+    padding: 10px 0;
+    padding-top: 30px;
+    border-radius: 5px;
+    z-index: 1025;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .03);
+    transform: translateY(10px);
+    transition: transform .2s cubic-bezier(.17,.67,.83,.67), opacity .3s ease-in-out;
+}
+
+.header-container .header-items .buttons-header .lang-section .options-lang .lang-box{
+    padding: 10px 0 0 0;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.header-container .header-items .buttons-header .lang-section .options-lang .lang-box .lang{
+    text-decoration: none;
+    color: var(--black);
+    position: relative;
+}
+
+.header-container .header-items .buttons-header .lang-section .options-lang .lang-box .lang::after{
+    content: '';
+    left: 0;
+    bottom: -1px;
+    background-color: var(--black);
+    width: 0;
+    height: 2px;
+    position: absolute;
+    transition: width .2s ease-in-out;
+}
+
+.header-container .header-items .buttons-header .lang-section .options-lang .lang-box .lang:hover::after{
+    width: 100%;
+}
+
+.header-container .header-items .buttons-header .lang-section .options-lang.active{
+    opacity: 1;
+    pointer-events: initial;
+    transform: translateY(0);
+}
+
+.header-container .header-items .buttons-header .lang-section .options-lang.active + .selected-lang{
+    color: var(--black);
+}
