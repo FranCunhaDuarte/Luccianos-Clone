@@ -11,7 +11,7 @@ const Header = ({ menuOpen, toggleMenu }) => {
         <>
             <div className='header-container'>
                 <div className='header-items'>
-                    <a href="" className='header-logo'><Logo /></a>
+                    <a href="" className='header-logo'><Logo color={'#000000'} /></a>
                     <div className='buttons-header'>
                         <Langs isOpen={menuOpen} />
                         <MenuButton isOpen={menuOpen} onToggle={toggleMenu}/>

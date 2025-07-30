@@ -1,5 +1,5 @@
-import MobileVideo from '../../assets/videos/mobile.mp4'
-import DesktopVideo from '../../assets/videos/video.mp4'
+import MobileVideo from '/public/media/videos/mobile.mp4'
+import DesktopVideo from '/public/media/videos/video.mp4'
 import MutedIcon from '../../inconComponents/Muted.jsx'
 import UnmutedIcon from '../../inconComponents/Unmuted.jsx'
 import './Hero.css'

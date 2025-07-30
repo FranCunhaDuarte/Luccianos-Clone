@@ -1,6 +1,7 @@
 
 .hero{
   position: relative;
+  max-height: 100vh;
 }
 
 .hero .hero-video{

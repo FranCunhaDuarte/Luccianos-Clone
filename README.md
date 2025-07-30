@@ -60,5 +60,3 @@ The goal is to practice front-end development, animation, and responsive design 
 
 This project is **for educational purposes only**.  
 All brand assets and designs belong to [Lucciano's](https://luccianos.net/).
-
----
