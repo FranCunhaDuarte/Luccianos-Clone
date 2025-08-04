@@ -24,32 +24,32 @@
 /* CALIBRE */
 @font-face {
   font-family: 'Calibre';
-  src: url('../../public/fonts/Calibre/Calibre-Black.woff') format('woff');
+  src: url('/fonts/Calibre/Calibre-Black.woff') format('woff');
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: 'Calibre';
-  src: url('../../public/fonts/Calibre/Calibre-Bold.woff') format('woff');
+  src: url('/fonts/Calibre/Calibre-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: 'Calibre';
-  src: url('../../public/fonts/Calibre/Calibre-Regular.woff') format('woff');
+  src: url('/fonts/Calibre/Calibre-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'SilkSerif';
-  src: url('../../public/fonts/Silk/SilkSerif-Light.woff') format('woff');
+  src: url('/fonts/Silk/SilkSerif-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: 'SilkSerif';
-  src: url('../../public/fonts/Silk/SilkSerif-Medium.otf') format('opentype');
+  src: url('/fonts/Silk/SilkSerif-Medium.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }

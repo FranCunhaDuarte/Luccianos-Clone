@@ -29,12 +29,12 @@ const Masters = () => {
             <h2 className='title'>#IL MAESTRO <br/>DEL GELATO</h2>
             <div className='logo-lucciano'><Logo  /></div>
             <div className='images-wrapper'>
-              <img className='reference carrousel' src="/public/media/images/imgi_52_master-1.webp" alt="master-img" />
+              <img className='reference carrousel' src="/media/images/imgi_52_master-1.webp" alt="master-img" />
               <div className='images'>
-                <img className='carrousel' src="/public/media/images/imgi_53_master-2.webp" alt="master-img" />
-                <img className='carrousel' src="/public/media/images/imgi_54_master-3.webp" alt="master-img" />
-                <img className='carrousel' src="/public/media/images/imgi_55_master-4.webp" alt="master-img" />
-                <img className='carrousel' src="/public/media/images/imgi_56_master-5.webp" alt="master-img" />
+                <img className='carrousel' src="/media/images/imgi_53_master-2.webp" alt="master-img" />
+                <img className='carrousel' src="/media/images/imgi_54_master-3.webp" alt="master-img" />
+                <img className='carrousel' src="/media/images/imgi_55_master-4.webp" alt="master-img" />
+                <img className='carrousel' src="/media/images/imgi_56_master-5.webp" alt="master-img" />
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
-import MobileVideo from '/public/media/videos/mobile.mp4'
-import DesktopVideo from '/public/media/videos/video.mp4'
+import MobileVideo from '/media/videos/mobile.mp4'
+import DesktopVideo from '/media/videos/video.mp4'
 import MutedIcon from '../../inconComponents/Muted.jsx'
 import UnmutedIcon from '../../inconComponents/Unmuted.jsx'
 import './Hero.css'
@@ -24,7 +24,7 @@ function Hero() {
   return (
     <>
       <section className='hero'>
-        <video ref={videoRef} className='hero-video' autoPlay loop muted controls={false} poster='./assets/VideoHero/video-cover.webp'>
+        <video ref={videoRef} className='hero-video' autoPlay loop muted controls={false} poster='./media/images/video-cover.webp'>
           <source src={MobileVideo}  media='(max-width: 768px)' type='video/mp4'/>
           <source src={DesktopVideo} media='(min-width: 768px)' type='video/mp4' />
         </video>
