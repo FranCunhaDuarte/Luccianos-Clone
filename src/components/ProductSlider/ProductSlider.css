@@ -1,0 +1,184 @@
+
+.product-slider{
+    position: relative;
+}
+
+.product-slider .slide-buttons-box{
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 200;
+    pointer-events: none;
+}
+
+.product-slider .slide-buttons-box .slide-buttons-wrapper{
+    width: 90%;
+    margin-inline: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.product-slider .slide-buttons-box .slide-buttons-wrapper .swiper-button{
+    width: 80px;
+    height: 80px;
+    background-color: var(--white);
+    border-radius: 50%;
+    box-shadow: 0px 0px 26px -10px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 26px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 26px -10px rgba(0,0,0,0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+}
+
+.product-slider .slide-buttons-box .slide-buttons-wrapper .swiper-button svg{
+    width: 35px;
+}
+
+.product-slider .slide-buttons-box .slide-buttons-wrapper .swiper-button:last-child svg{
+    transform: scaleX(-1);
+}
+
+.product-slider .swiper{
+    overflow: visible;
+    position: relative;
+    z-index: 100;
+}
+
+
+.product-slider .flavors-swapper .product{
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.product-slider .flavors-swapper .product .product-image{
+    z-index: 200;
+    position: relative;
+}
+
+.product-slider .flavors-swapper .product .product-image img{
+    width: 120px;
+    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.product-slider .flavors-swapper .product .product-details{
+    position: absolute;
+    right: 0;
+    top: calc(100% - 85px);
+    transform: scale(0);
+    transform-origin: top;
+    padding: 140px 40px 50px;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(126, 88, 88);
+    text-align: center;
+    color: var(--black);
+    z-index: 100;
+    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.carousel-container.icepops .product-slider .flavors-swapper .product .product-details{
+    top: calc(100% + 20px);
+    right: 50%;
+    transform: translateX(50%) scale(0);
+}
+
+.product-slider .flavors-swapper .product .product-details .title{
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.product-slider .flavors-swapper .product .product-details .description{
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.product-slider .flavors-swapper .product .product-details .plus{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    margin-inline: auto;
+    margin-top: 5px;
+}
+
+.product-slider .flavors-swapper .product .product-details .plus .line-1{
+    width: 1px;
+    height: 100%;
+    background-color: var(--black);
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.product-slider .flavors-swapper .product .product-details .plus .line-2{
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    width: 90%;
+    text-align: center;
+    padding: 15px 15px 11px 15px;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 50px;
+    font-weight: 700;
+    font-family: 'Calibre',sans-serif;
+    font-size: 14px;
+    margin-inline: auto;
+  }
+
+@media (min-width: 800px) {
+    .product-slider .flavors-swapper .product .product-image img{
+        width: 180px;
+    }
+
+    .product-slider .flavors-swapper .product{
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .product-slider .flavors-swapper .product:hover .product-details{
+        transform: scale(1);
+    }
+
+    .product-slider .flavors-swapper .product:hover .product-image img{
+        transform: scale(1.35);
+    }
+
+    .carousel-container.icepops .product-slider .flavors-swapper .product:hover .product-details{
+        transform: translateX(50%) scale(1);
+    }
+
+    .product-slider .flavors-swapper .product .product-image img{
+        width: 250px;
+    }
+
+    .product-slider .flavors-swapper .product{
+        width: 250px;
+        height: 250px;
+    }
+
+    .button{
+        width: 250px;
+    }
+}

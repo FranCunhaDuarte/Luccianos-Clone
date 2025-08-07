@@ -5,6 +5,9 @@ import SideMenuMobile from './layouts/SideMenu/SideMenuMobile.jsx'
 import Lenis from 'lenis'
 
 const App = () => {
+
+
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.6,
