@@ -2,7 +2,7 @@ import React from 'react'
 import './ProductSlider.css'
 import SVGArrow from '../../inconComponents/Arrow';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode, Navigation } from 'swiper/modules';
+import { FreeMode } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import { useRef } from 'react';
@@ -19,7 +19,7 @@ const ProductSlider = ({products=[]}) => {
             <div className='slide-buttons-box'>
               <div className='slide-buttons-wrapper'>
                 <div className="swiper-button swiper-button-prev" ref={prevRef}>
-                  <SVGArrow />
+                  <SVGArrow direction={'left'} />
                 </div>
                 <div className="swiper-button swiper-button-next" ref={nextRef}>
                   <SVGArrow />
@@ -30,15 +30,11 @@ const ProductSlider = ({products=[]}) => {
             spaceBetween={0}
             slidesPerView="auto"
             freeMode={true}
-            modules={[FreeMode,Navigation]}
+            modules={[FreeMode]}
             loop={true}
             navigation={{
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev"
-            }}
-            onBeforeInit={(swiper)=>{
-              swiper.params.navigation.nextEl = nextRef.current,
-              swiper.params.navigation.prevEl = prevRef.current
             }}
             className='flavors-swapper'>  
                 {products.map((product) => (
@@ -46,6 +42,7 @@ const ProductSlider = ({products=[]}) => {
                     <a href="">
                       <div className='product-image'>
                         <img src={`/media/images/products/${product.url}.webp`} alt={`${product.name}`} />
+                        <img src='/media/images/products/imgi_89_bite.webp' alt="bite" className='bite-image' />
                       </div>
                       <div className='product-details' style={ {backgroundColor: product.color} }>
                         <div className='details-box'>  

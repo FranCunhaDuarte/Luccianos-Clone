@@ -3,6 +3,7 @@ import Header from './layouts/Header/Header.jsx'
 import Main from './pages/Home.jsx'
 import SideMenuMobile from './layouts/SideMenu/SideMenuMobile.jsx'
 import Lenis from 'lenis'
+import Footer from './layouts/Footer/Footer.jsx'
 
 const App = () => {
 
@@ -40,7 +41,7 @@ const App = () => {
         <Header menuOpen={menuOpen} toggleMenu={toggleMenu} />
         <SideMenuMobile menuOpen={menuOpen} />
         <Main />
-        
+        <Footer />
     </>
   )
 }

@@ -1,0 +1,35 @@
+.arrow-slider{
+    width: 17px;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-slider.left{
+    transform: scale(-1,1);
+}
+
+.arrow-slider div{
+    width: 1px;
+    height: 100%;
+    background-color: var(--black);
+}
+
+.arrow-slider div:first-child{
+    height: 1px;
+    width: 100%;
+    background-color: var(--black);
+    transform-origin: right bottom;
+    transform: translateX(-2px) rotate(45deg);
+}
+
+.arrow-slider div:last-child{
+    height: 1px;
+    width: 100%;
+    background-color: var(--black);
+    transform-origin: right top;
+    transform: translateX(-2px) rotate(-45deg);
+}

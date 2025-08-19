@@ -1,0 +1,113 @@
+.news-card{
+    width: 100%;
+    border: 1px solid var(--black);
+    border-right: none;
+    border-block: none;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.news-card:last-child{
+    border-right: 1px solid var(--black);
+}
+
+.news-card .element-new-card{
+    padding: 12vw 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    text-decoration: none;
+    color: var(--black);
+    position: relative;
+    height: 100%;
+}
+
+.news-card .element-new-card .image-new-box{
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+
+.news-card:hover .element-new-card .image-new-box img{
+    transform: scale(1.1);
+}
+
+.news-card .element-new-card .image-new-box img{
+    width: 100%;
+    object-fit: cover;
+    transition: transform .4s ease-in-out;
+}
+
+.news-card .element-new-card .text-deco{
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    font-size: 1rem;
+    text-transform: uppercases;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.news-card .element-new-card .text-deco::after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: var(--black);
+    top: -10px;
+    left: 0;
+    transition: width .2s ease-in-out;
+}
+
+.news-card:hover .element-new-card .text-deco::after{
+    width: 100%;
+}
+
+.news-card .element-new-card .title{
+    text-transform: uppercases;
+    color: var(--black);
+    font-size: 3.8vw;
+    line-height: .9;
+    font-weight: 900;
+}
+
+.news-card .element-new-card .body{
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1000px) {
+    .news-card .element-new-card{
+        padding: 12vw 20px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        text-decoration: none;
+        color: var(--black);
+        position: relative;
+        height: 100%;
+    }
+
+
+    .news-card .element-new-card .text-deco::after{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: var(--black);
+        top: -10px;
+        left: 0;
+        transition: width .2s ease-in-out;
+    }
+
+    .news-card .element-new-card .title{
+        margin-top: 30px;
+    }
+
+    .news-card .element-new-card .image-new-box{
+        margin-top: 70px;
+    }
+}

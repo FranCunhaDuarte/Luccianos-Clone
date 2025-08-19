@@ -1,0 +1,23 @@
+/* Posición de la paginación */
+.news-swiper-container .swiper-pagination {
+    bottom: -1px !important;
+}
+
+/* Estilo para bullets */
+.my-bullet {
+  width: 7px;
+  height: 7px;
+  background: var(--black);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 10px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.my-bullet-active {
+  background: var(--black);
+  opacity: 1;
+  transform: scale(1.2);
+}

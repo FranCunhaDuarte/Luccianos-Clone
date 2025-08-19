@@ -34,6 +34,7 @@
     align-items: center;
     justify-content: center;
     pointer-events: auto;
+    cursor: pointer;
 }
 
 .product-slider .slide-buttons-box .slide-buttons-wrapper .swiper-button svg{
@@ -65,6 +66,19 @@
 .product-slider .flavors-swapper .product .product-image img{
     width: 120px;
     transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.product-slider .flavors-swapper .product .product-image img.bite-image{
+    display: none;
+}
+
+.carousel-container.icepops .product-slider .flavors-swapper .product .product-image img.bite-image{
+    display: initial;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    
 }
 
 .product-slider .flavors-swapper .product .product-details{
@@ -161,9 +175,26 @@
         transform: scale(1);
     }
 
+    .carousel-container .product-slider .flavors-swapper .product:hover .product-image{
+        animation: floating 2s ease-in-out infinite;
+    }
+
+    .carousel-container.icepops .product-slider .flavors-swapper .product:hover .product-image{
+        animation: floating 2s ease-in-out .7s infinite, bite .2s linear .5s;
+    }
+
     .product-slider .flavors-swapper .product:hover .product-image img{
         transform: scale(1.35);
     }
+
+    .carousel-container.icepops .product-slider .flavors-swapper .product:hover .product-image img.bite-image{
+        opacity: 1;
+        transition: opacity 0s ease-in-out;
+        transition-delay: .5s;
+    }
+
+    
+    
 
     .carousel-container.icepops .product-slider .flavors-swapper .product:hover .product-details{
         transform: translateX(50%) scale(1);
@@ -180,5 +211,33 @@
 
     .button{
         width: 250px;
+    }
+}
+
+
+@keyframes bite {
+    0% {
+        transform-origin: center bottom;
+        transform: rotate(1deg);
+    }
+    50% {
+        transform-origin: center bottom;
+        transform: rotate(-1deg);
+    }
+    100% {
+        transform-origin: center bottom;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0px);
     }
 }
