@@ -87,6 +87,10 @@
     margin: 200px 0px 0px;
 }
 
+.products-carousel .button-box a{
+    text-decoration: none;
+}
+
 @media (min-width: 1000px) {
     .section-box{
         justify-content: flex-end;

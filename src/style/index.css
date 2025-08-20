@@ -10,8 +10,11 @@
 
 
   --white: #fff;
-  --dark-white: #ffffff50;
+  --dark-white-800: #ffffff50;
+
   --black: #222;
+  --black-900: #101010;
+  --black-800: #1a1a1a;
 
 }
 

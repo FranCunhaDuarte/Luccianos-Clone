@@ -4,7 +4,7 @@ import Masters from '../components/Masters/Masters.jsx'
 import Products from '../components/Products/Products.jsx'
 import OurShops from '../components/OurShops/OurShops.jsx'
 import News from '../components/News/News.jsx'
-import Partners from '../components/Brands/Partners.jsx'
+import Partners from '../components/Partners/Partners.jsx'
 
 const Home = () => {
   return (
