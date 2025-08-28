@@ -1,6 +1,7 @@
 import React from 'react'
 import PhotosSlider from '../PhotosSlider/PhotosSlider.jsx'
 import './OurShops.css'
+import ButtonHover from '../ButtonHover/ButtonHover.jsx'
 
 const OurStores = () => {
   return (
@@ -26,9 +27,7 @@ const OurStores = () => {
                     <PhotosSlider />
                 </div>
                 <div className='button-wrapper'>
-                    <div className='button-box'>
-                        <a href="" className='button'>CHECK OUT OUR SHOPS</a>
-                    </div>
+                    <ButtonHover text={'CHECK OUT OUR SHOPS'} />
                     <div className='line'></div>
                 </div>
             </div>

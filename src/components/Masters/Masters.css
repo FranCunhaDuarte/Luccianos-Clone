@@ -133,23 +133,7 @@
     width: 90%;
     display: flex;
     align-items: flex-end;
-    padding: 60px;
-  }
-
-  .masters .buttons-image .wrapper .button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    width: 280px;
-    text-align: center;
-    padding: 15px 15px 11px 15px;
-    background-color: var(--white);
-    color: var(--black);
-    border-radius: 50px;
-    font-weight: 700;
-    font-family: 'Calibre',sans-serif;
-    font-size: 14px;
+    padding: 60px 0;
   }
 
 }

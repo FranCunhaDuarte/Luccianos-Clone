@@ -83,8 +83,10 @@
 }
 
 .products-carousel .button-box{
-    width: 100%;
-    margin: 200px 0px 0px;
+    max-width: 90%;
+    margin: 200px auto 0px;
+    display: flex;
+    justify-content: center;
 }
 
 .products-carousel .button-box a{

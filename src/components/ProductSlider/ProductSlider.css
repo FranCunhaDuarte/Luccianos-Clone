@@ -142,23 +142,6 @@
     transform: translateY(-50%);
 }
 
-.button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    width: 90%;
-    text-align: center;
-    padding: 15px 15px 11px 15px;
-    background-color: var(--black);
-    color: var(--white);
-    border-radius: 50px;
-    font-weight: 700;
-    font-family: 'Calibre',sans-serif;
-    font-size: 14px;
-    margin-inline: auto;
-  }
-
 @media (min-width: 800px) {
     .product-slider .flavors-swapper .product .product-image img{
         width: 180px;
@@ -209,9 +192,6 @@
         height: 250px;
     }
 
-    .button{
-        width: 250px;
-    }
 }
 
 

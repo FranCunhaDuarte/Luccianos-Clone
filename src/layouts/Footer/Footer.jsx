@@ -4,6 +4,7 @@ import SVGFacebook from '../../inconComponents/Facebook'
 import SVGInstagram from '../../inconComponents/Instagram'
 import SVGTikTok from '../../inconComponents/TikTok'
 import './Footer.css'
+import ButtonHover from '../../components/ButtonHover/ButtonHover'
 
 const Footer = () => {
   return (
@@ -72,11 +73,9 @@ const Footer = () => {
                             <label>EMAIL</label>
                             <input type="text" required/>
                         </div>
-                        <button type='submit'>
-                            <div className='button-box'>
-                                <a href="" className='button'>CHECK OUT OUR SHOPS</a>
-                            </div>
-                        </button>
+                        <div className='button-box'>
+                            <ButtonHover text={'SUSCRIBE'} color='white' />
+                        </div>
                     </form>
                     <div className='social-media'>
                         <a href='' className='item'><SVGTikTok color='#fff' /><span>@luccianos_</span></a>

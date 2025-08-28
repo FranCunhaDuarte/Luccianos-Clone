@@ -76,7 +76,6 @@
     justify-content: center;
     width: 100vw;
     aspect-ratio: 1 / 1;
-    
 }
 
 .our-store .our-store-wrapper .store-image-container picture img{
@@ -91,7 +90,10 @@
 }
 
 .our-store .our-store-wrapper .button-wrapper{
-    margin: 30px 0;
+    margin: 30px auto;
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
 }
 
 .our-store .our-store-wrapper .button-wrapper .line{
@@ -117,17 +119,25 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 70vw;
+        width: 70%;
         overflow: hidden;
         top: -80px;
         right: 0;
-        max-height: 500px;
+        height: 650px;
         transform: translateX(0);
-    } 
+    }
+
+    .our-store .our-store-wrapper .store-image-container picture{
+        width: 150%;
+    }
+
+    .our-store .our-store-wrapper .store-image-container picture img{
+        width: 100%;
+    }
 
     .our-store .our-store-wrapper .photos-slider-container{
         position: absolute;
-        bottom: 50px;
+        bottom: -150px;
         right: 5vw;
         width: 40vw;
         margin-top: 0;

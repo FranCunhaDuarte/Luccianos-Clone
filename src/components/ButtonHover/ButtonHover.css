@@ -1,0 +1,119 @@
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    line-height: 1;
+    text-align: center;
+    padding: 15px 40px 11px 40px;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 50px;
+    font-weight: 700;
+    font-family: 'Calibre',sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.button.white{
+    background-color: var(--white);
+    color: var(--black);
+}
+
+@keyframes changeToWhite {
+  to { background-color: var(--white); color: var(--black); }
+}
+
+@keyframes changeToBlack {
+  to { background-color: var(--black); color: var(--white); }
+}
+
+
+.button:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 15px;
+    animation: changeToWhite 0s forwards;
+    animation-delay: .3s;
+}
+
+
+.button.white:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 15px;
+    animation: changeToBlack 0s forwards;
+    animation-delay: .3s;
+}
+
+@keyframes enterFromBottom {
+  from { top: calc(50% + 100%); }
+  to   { top: 50%; }
+}
+
+@keyframes exitToTop {
+  from { top: 50%; }
+  to   { top: calc(-100%); }
+}
+
+.button::after{
+    content: '';
+    position: absolute;
+    z-index: 20;
+    top: calc(50% + 100%); /* estado inicial abajo */
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 101%;
+    height: 103%;
+    border-radius: 50px;
+    background-color: var(--white);
+}
+
+.button.white::after{
+    background-color: var(--black);
+}
+
+.button span{
+    text-wrap: nowrap;
+}
+
+.button span:first-child{
+    transition: opacity .7s ease-in-out, transform .3s ease-in-out;
+}
+
+.button span:last-child{
+    position: absolute;
+    top: calc(50% + 40px);
+    left: 50%;
+    transform: translate(-50%,calc(-50% + 2px));
+    color: var(--black);
+    z-index: 30;
+    opacity: 0;
+    transition: top .45s ease-in-out, opacity .3s ease-in-out;
+}
+
+.button.white span:last-child{
+    color: var(--white);
+}
+
+.button:hover::after {
+    animation: enterFromBottom .3s forwards;
+}
+
+.button:not(:hover)::after {
+    animation: exitToTop .6s forwards;
+}
+
+.button:hover span:first-child{
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.button:hover span:last-child{
+    top: 50%;
+    opacity: 1;
+}
+
+@media (min-width: 800px) {
+    .button{
+        width: initial;
+    }
+}

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import './Masters.css'
 import Logo from '../../inconComponents/Logo.jsx'
+import ButtonHover from '../ButtonHover/ButtonHover.jsx'
 
 const Masters = () => {
 
@@ -40,9 +41,7 @@ const Masters = () => {
           </div>
           <div className='buttons-image'>
             <div className='wrapper'>
-              <a className='button'>
-                <span>DISCOVER LUCCIANO'S CENTRAL</span>
-              </a>
+              <ButtonHover text={'DISCOVER LUCCIANO\'S CENTRAL'} color='white' />
             </div>
           </div>
         </section>

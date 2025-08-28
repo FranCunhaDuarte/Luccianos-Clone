@@ -1,6 +1,7 @@
 import React from 'react'
 import ProductSlider from '../ProductSlider/ProductSlider'
 import './Products.css'
+import ButtonHover from '../ButtonHover/ButtonHover'
 
 const Products = () => {
 
@@ -67,9 +68,7 @@ const Products = () => {
                     <ProductSlider products={icepops}/>
                 </div>
                 <div className="button-box">
-                    <a className='button'>
-                        <span>SEE ALL</span>
-                    </a>
+                    <ButtonHover text={'SEE ALL'} />
                 </div>
             </div>
         </section>
