@@ -4,11 +4,7 @@ import SVGFacebook from '../../inconComponents/Facebook'
 import SVGTikTok from '../../inconComponents/TikTok'
 import './SideMenuMobile.css'
 
-const SideMenu = ({ menuOpen }) => {
-
-  
-
-
+const SideMenuMobile = ({ menuOpen }) => {
   return (
     <>
         <div className={`sidemenu-container ${menuOpen ? 'is-visible' : ''}`}>
@@ -42,4 +38,4 @@ const SideMenu = ({ menuOpen }) => {
   )
 }
 
-export default SideMenu
+export default SideMenuMobile

@@ -69,7 +69,7 @@ const PhotosSlider = () => {
                 {activeIndex}
               </span>
               <span className='splitter'></span>
-              <span className='number'>{photos.length}</span>
+              <span className='number-total'>{photos.length}</span>
             </div>
             <div className='deco'></div>
           </div>

@@ -58,3 +58,7 @@
     bottom: 50%;
     transform: rotate(-45deg) translateY(50%);
 }
+
+.header-container.scrolled .header-items .buttons-header .toggle-navbar .menu-button .line{
+    background-color: var(--black);
+}

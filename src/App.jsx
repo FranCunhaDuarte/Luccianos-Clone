@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import Header from './layouts/Header/Header.jsx'
 import Main from './pages/Home.jsx'
-import SideMenuMobile from './layouts/SideMenu/SideMenuMobile.jsx'
+import SideMenuMobile from './layouts/SideMenu/SideMenu.jsx'
 import Lenis from 'lenis'
 import Footer from './layouts/Footer/Footer.jsx'
 

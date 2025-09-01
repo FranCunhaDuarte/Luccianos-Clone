@@ -82,3 +82,7 @@
 .header-container .header-items .buttons-header .lang-section .options-lang.active + .selected-lang{
     color: var(--black);
 }
+
+.header-container.scrolled .header-items .buttons-header .lang-section .selected-lang{
+    color: var(--black);
+}

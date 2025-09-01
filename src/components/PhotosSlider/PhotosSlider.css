@@ -65,6 +65,11 @@
     padding: 0 10px;
 }
 
+.photos-slider-card .photos-items-slider .index-slider .indexs .number-total{
+    padding-top: 7px;
+    display: inline-block;
+}
+
 .photos-slider-card .photos-items-slider .index-slider .indexs .number{
     padding-top: 7px;
     display: inline-block;
