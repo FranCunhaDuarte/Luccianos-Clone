@@ -74,7 +74,7 @@ const ProductSlider = ({ products = [] }) => {
               <a href="">
                 <div className='product-image'>
                   <img src={`/media/images/products/${product.url}.webp`} alt={`${product.name}`} />
-                  <img src='/media/images/products/imgi_89_bite.webp' alt="bite" className='bite-image' />
+                  <img src='/media/images/products/icepops/imgi_89_bite.webp' alt="bite" className='bite-image' />
                 </div>
                 <div className='product-details' style={{ backgroundColor: product.color }}>
                   <div className='details-box'>

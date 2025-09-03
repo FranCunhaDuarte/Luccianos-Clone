@@ -18,6 +18,20 @@
 
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Para Firefox */
+html {
+  scrollbar-width: none; /* Oculta la barra */
+}
+
+/* Para IE y Edge Legacy */
+html {
+  -ms-overflow-style: none; 
+}
+
 *{
   margin: 0;
   padding: 0;

@@ -1,0 +1,26 @@
+.sidemenu-container .sidemenu-box .navbar-wrapper .menu-navbar-images .menu-images-wrapper .container-data-section.single-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.sidemenu-container .sidemenu-box .navbar-wrapper .menu-navbar-images .menu-images-wrapper .container-data-section.single-column.active{
+    opacity: 1;
+}
+
+.sidemenu-container .sidemenu-box .navbar-wrapper .menu-navbar-images .menu-images-wrapper .container-data-section.single-column .colum{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sidemenu-container .sidemenu-box .navbar-wrapper .menu-navbar-images .menu-images-wrapper .container-data-section.single-column .year{
+    font-size: 18vw;
+    color: var(--black);
+    font-weight: 700;
+    line-height: .9;
+}

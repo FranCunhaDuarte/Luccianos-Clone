@@ -9,12 +9,14 @@ import Partners from '../components/Partners/Partners.jsx'
 const Home = () => {
   return (
     <>
-        <Hero />
-        <Masters />
-        <Products />
-        <OurShops />
-        <News />
-        <Partners />
+      <main>
+          <Hero />
+          <Masters />
+          <Products />
+          <OurShops />
+          <News />
+          <Partners />
+      </main>
     </>
   )
 }

@@ -1,0 +1,41 @@
+.sidemenu-container .sidemenu-box .navbar-wrapper .menu-navbar-images .menu-images-wrapper{
+    position: relative;
+}
+
+.sidemenu-container .sidemenu-box .navbar-wrapper .menu-navbar-images .menu-images-wrapper .container-data-section{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.sidemenu-container .sidemenu-box .navbar-wrapper .menu-navbar-images .menu-images-wrapper .container-data-section.three-colums{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.sidemenu-container .sidemenu-box .navbar-wrapper .menu-navbar-images .menu-images-wrapper .container-data-section.three-colums.active{
+    opacity: 1;
+}
+
+.sidemenu-container .sidemenu-box .navbar-wrapper .menu-navbar-images .menu-images-wrapper .container-data-section.three-colums .colum{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidemenu-container .sidemenu-box .navbar-wrapper .menu-navbar-images .menu-images-wrapper .container-data-section.three-colums .colum div{
+    height: 100%;
+}
+
+.sidemenu-container .sidemenu-box .navbar-wrapper .menu-navbar-images .menu-images-wrapper .container-data-section.three-colums .colum img{
+    width: 100%;
+}
