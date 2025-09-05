@@ -5,6 +5,8 @@ import gsap from 'gsap'
 const SideMenuOneColum = ({elements, timing = 0, className=''}) => {
 
     const fisrtCol = useRef(null)
+
+    const timelineRef = useRef([])
     
     
     useEffect(()=>{
@@ -12,18 +14,21 @@ const SideMenuOneColum = ({elements, timing = 0, className=''}) => {
 
             const childHeight = col.children[0].offsetHeight
 
-            gsap.fromTo(col,{
-                y: direct=='up' ? 0 : -childHeight,
-            },{
-                y: direct=='up' ? -childHeight : 0,
-                repeat: -1,
-                duration: timing,
-                ease: 'none'
+            const timeline = gsap.timeline({
+              repeat: -1,
+              defaults: {duration: timing, ease: 'none'}
             })
+
+            timeline.fromTo(col,
+              { y: direct=='up' ? 0 : -childHeight },
+              { y: direct=='up' ? -childHeight : 0 }
+            )
+
+            return timeline.pause()
         }
 
         const handleLoad = () => {
-            animationInfiniteScroll(fisrtCol.current, 'up');
+          timelineRef.current = [animationInfiniteScroll(fisrtCol.current, 'up')]
         };
 
         window.addEventListener("load", handleLoad);
@@ -31,7 +36,18 @@ const SideMenuOneColum = ({elements, timing = 0, className=''}) => {
         return () => {
             window.removeEventListener("load", handleLoad);
         };
-    },[])
+    },[timing])
+
+    useEffect(()=> {
+      if(timelineRef.current.length === 0) return;
+
+      if(className == 'active'){
+        timelineRef.current.forEach((ele) => {ele.play()})
+      } else{
+        timelineRef.current.forEach((ele) => {ele.pause()})
+      }
+
+    },[className])
 
   return (
     <>

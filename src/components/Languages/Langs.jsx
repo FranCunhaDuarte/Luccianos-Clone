@@ -23,7 +23,7 @@ const Langs = ({isOpen}) => {
                     <li className='lang-box'><a href="" className='lang'>JA</a></li>
                     <li className='lang-box'><a href="" className='lang'>CH</a></li>
                 </ul>
-                <a href='' className='selected-lang' onClick={toggleLangMenu}>EN</a>
+                <a href='' className='selected-lang' onClick={toggleLangMenu} onMouseEnter={window.innerWidth > 1000 ? toggleLangMenu : null}>EN</a>
             </div>
         </>
     )
