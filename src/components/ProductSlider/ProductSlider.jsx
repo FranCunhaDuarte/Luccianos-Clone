@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import './ProductSlider.css'
 import SVGArrow from '../../inconComponents/Arrow';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -6,9 +6,10 @@ import { FreeMode } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 
-const ProductSlider = ({ products = [] }) => {
+const ProductSlider = ({ products = [] , direct = 'right'}) => {
   const swiperRef = useRef(null);
   const intervalRef = useRef(null);
+  const containerRef = useRef(null);
 
   const startSliding = (direction) => {
     if (!swiperRef.current) return;
@@ -38,9 +39,37 @@ const ProductSlider = ({ products = [] }) => {
     }
   };
 
+  useEffect(() => {
+  const handleScroll = () => {
+    if (!swiperRef.current || !containerRef.current) return;
+
+    const rect = containerRef.current.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (rect.top < windowHeight && rect.bottom > 0) {
+      const progress =
+        (windowHeight - rect.top) / (windowHeight + rect.height);
+
+      const maxTranslate = swiperRef.current.maxTranslate(); // negativo
+      let translate = progress * maxTranslate;
+
+      // 🔄 Loop manual
+      const totalWidth = Math.abs(maxTranslate);
+      translate = ((translate % totalWidth) + totalWidth) % totalWidth;
+      translate = -translate;
+
+      swiperRef.current.setTranslate(translate);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
+
   return (
     <>
-      <div className='product-slider'>
+      <div className='product-slider' ref={containerRef}>
         <div className='slide-buttons-box'>
           <div className='slide-buttons-wrapper'>
             <div
@@ -65,7 +94,7 @@ const ProductSlider = ({ products = [] }) => {
           slidesPerView="auto"
           freeMode={true}
           modules={[FreeMode]}
-          loop={true}
+          loop={false} // ⚠️ no usar loop porque rompe setTranslate
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           className='flavors-swapper'
         >
