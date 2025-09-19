@@ -57,7 +57,7 @@ const Products = () => {
             </div>
             <div className='products-carousel'>
                 <div className='carousel-container'>
-                    <ProductSlider products={gelato} direction='left' />
+                    <ProductSlider products={gelato} direct='left' />
                 </div>
                 <div className='section-name-wrapper'>
                     <div className='section-box'>
@@ -65,7 +65,7 @@ const Products = () => {
                     </div>
                 </div>
                 <div className='carousel-container icepops'>
-                    <ProductSlider products={icepops} direction='right'/>
+                    <ProductSlider products={icepops} direct='right'/>
                 </div>
                 <div className="button-box">
                     <ButtonHover text={'SEE ALL'} />

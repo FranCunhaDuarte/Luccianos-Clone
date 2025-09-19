@@ -40,31 +40,31 @@ const ProductSlider = ({ products = [] , direct = 'right'}) => {
   };
 
   useEffect(() => {
-  const handleScroll = () => {
-    if (!swiperRef.current || !containerRef.current) return;
+    const handleScroll = () => {
+      if (!swiperRef.current || !containerRef.current) return;
 
-    const rect = containerRef.current.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
+      const rect = containerRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
 
-    if (rect.top < windowHeight && rect.bottom > 0) {
-      const progress =
-        (windowHeight - rect.top) / (windowHeight + rect.height);
+      if (rect.top < windowHeight && rect.bottom > 0) {
+        const progress =
+          (windowHeight - rect.top) / (windowHeight + rect.height);
 
-      const maxTranslate = swiperRef.current.maxTranslate(); // negativo
-      let translate = progress * maxTranslate;
+        const maxTranslate = swiperRef.current.maxTranslate(); // negativo
+        let translate = (direct == 'right' ? progress : -progress) * maxTranslate;
 
-      // 🔄 Loop manual
-      const totalWidth = Math.abs(maxTranslate);
-      translate = ((translate % totalWidth) + totalWidth) % totalWidth;
-      translate = -translate;
+        // 🔄 Loop manual
+        const totalWidth = Math.abs(maxTranslate);
+        translate = ((translate % totalWidth) + totalWidth) % totalWidth;
+        translate = -translate;
 
-      swiperRef.current.setTranslate(translate);
-    }
-  };
+        swiperRef.current.setTranslate(translate);
+      }
+    };
 
-  window.addEventListener("scroll", handleScroll, { passive: true });
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
 
   return (
