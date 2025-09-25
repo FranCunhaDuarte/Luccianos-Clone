@@ -4,7 +4,7 @@ This project is a **recreation of [Lucciano's official website](https://lucciano
 The goal is to practice front-end development, animation, and responsive design using modern tools like React and GSAP.
 
 🔗 **Original site:** https://luccianos.net/  
-🌐 **Live clone:** [LINK]
+🌐 **Live clone:** [Lucciano's Clone](https://luccianos-clone.vercel.app/)
 
 ---
 
