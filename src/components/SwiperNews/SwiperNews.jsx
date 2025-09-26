@@ -25,7 +25,7 @@ const SwiperNews = () => {
   if(!isSliderActive){
     return <>
         {newsData.map((news)=>(
-          <NewsCard item={news} />
+          <NewsCard key={news.id} item={news} />
         ))}
     </>
   }
